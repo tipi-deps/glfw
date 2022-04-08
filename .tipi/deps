@@ -1,0 +1,21 @@
+{
+	"x:linux-cxx17": [
+		"!/deps/**",
+		"/src/cocoa_*",
+		"/src/win32_*",
+		"/src/wl_*",
+		"/src/wgl_context.c",
+		"/deps_test/mingw/**",
+		"/deps_test/vs2008/**"
+	],	
+	"requires": {
+		"platform": [ 
+			"target::m",
+			"target::dl",
+			{ "find_mode": "QUIET", "packages": ["x11"], "targets": ["PkgConfig::x11"] },
+			{ "find_mode": "QUIET", "packages": ["xi"], "targets": ["PkgConfig::xi"] }, 
+			{ "find_mode": "QUIET", "packages": ["xinerama"], "targets": ["PkgConfig::xinerama"] },
+			{ "find_mode": "QUIET", "packages": ["xrandr"], "targets": ["PkgConfig::xrandr"] }
+		]
+	}
+}
